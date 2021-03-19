@@ -16,6 +16,7 @@ jobs:
       - name: npm install
         run: npm install
       - name: lint
+<<<<<<< HEAD
         run: npm run eslint    
       - uses: actions/checkout@v2
       - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
@@ -23,3 +24,10 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "aymenpokemon" #Must be unique in Heroku
           heroku_email: "elouazzani.aymene@gmail.com"
+=======
+        run: npm run eslint
+      - name: build
+        run: npm run build
+      - name: test
+        run: npm test    
+>>>>>>> ac09095dac1f051742ebc1998e1eb7ce102aa7f8
